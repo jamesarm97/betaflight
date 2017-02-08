@@ -104,7 +104,6 @@ deploy:
   file: "obj/betaflight_3.2.0_SPRACINGF3.hex"
   skip_cleanup: true
   on:
-    tags: true
     all_branches: true
 
 notifications:

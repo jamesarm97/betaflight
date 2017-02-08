@@ -100,7 +100,7 @@ cache:
 
 deploy:
   provider: releases
-  api_key: "e672cc3b4247a7b77919b85fc9512ab967d32fa2"
+  api_key: ""
   file: "obj/betaflight_3.2.0_SPRACINGF3.hex"
   skip_cleanup: true
   on:

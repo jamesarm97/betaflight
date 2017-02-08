@@ -54,7 +54,7 @@ env:
 #  - TARGET=SOULF4
 #  - TARGET=SPARKY
 #  - TARGET=SPARKY2
-  - TARGET=SPRACINGF3 
+  - TARGET=SPRACINGF3
 #  - TARGET=SPRACINGF3EVO
 #  - TARGET=SPRACINGF3MINI
 #  - TARGET=STM32F3DISCOVERY
@@ -98,11 +98,18 @@ cache:
 #  use_notice: true
 #  skip_join: true
 
+deploy:
+  provider: releases
+  api_key: "e672cc3b4247a7b77919b85fc9512ab967d32fa2"
+  file: "obj/betaflight_3.2.0_SPRACINGF3.hex"
+  skip_cleanup: true
+  on:
+    tags: true
+
 notifications:
-  slack: betaflightgroup:LQSj02nsBEdefcO5UQcLgB0U
+  slack:
   webhooks:
     urls:
-      - https://webhooks.gitter.im/e/0c20f7a1a7e311499a88
     on_success: always  # options: [always|never|change] default: always
     on_failure: always  # options: [always|never|change] default: always
     on_start: always     # options: [always|never|change] default: always
